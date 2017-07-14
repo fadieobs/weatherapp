@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="security@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="information_schema"/>
+    <schema id="3" parent="1" name="mysql"/>
+    <schema id="4" parent="1" name="security">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="5" parent="1" name="test"/>
+    <table id="6" parent="4" name="authorities"/>
+    <table id="7" parent="4" name="notes"/>
+    <table id="8" parent="4" name="permissions"/>
+    <table id="9" parent="4" name="ranges"/>
+    <table id="10" parent="4" name="users"/>
+    <column id="11" parent="6" name="username">
+      <Position>1</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="12" parent="6" name="authority">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="6" name="id">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="14" parent="6" name="emailaddress">
+      <Position>4</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="15" parent="6" name="authorities_username_authority_uindex">
+      <ColNames>username
+authority</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="16" parent="6" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="17" parent="6" name="authorities_users_emailaddress_fk">
+      <ColNames>emailaddress</ColNames>
+      <RefSchemaName>security</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>emailaddress</RefColNames>
+    </foreign-key>
+    <column id="18" parent="7" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="7" name="notes">
+      <Position>2</Position>
+      <DataType>VARCHAR(500)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="7" name="range_id">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="7" name="date">
+      <Position>4</Position>
+      <DataType>DATE(10)|91</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="22" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="23" parent="7" name="notes_ranges_id_fk">
+      <ColNames>range_id</ColNames>
+      <RefSchemaName>security</RefSchemaName>
+      <RefTableName>ranges</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="24" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="8" name="username">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="8" name="target">
+      <Position>3</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="8" name="permission">
+      <Position>4</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="8" name="emailaddress">
+      <Position>5</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="29" parent="8" name="permissions_users_username_fk">
+      <ColNames>username</ColNames>
+    </index>
+    <key id="30" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="31" parent="8" name="permissions_users_emailaddress_fk">
+      <ColNames>emailaddress</ColNames>
+      <RefSchemaName>security</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>emailaddress</RefColNames>
+    </foreign-key>
+    <column id="32" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="33" parent="9" name="start">
+      <Position>2</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="9" name="end">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="35" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="10" name="username">
+      <Position>1</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="10" name="password">
+      <Position>2</Position>
+      <DataType>VARCHAR(60)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="10" name="enabled">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="39" parent="10" name="emailaddress">
+      <Position>4</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="10" name="status">
+      <Position>5</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="41" parent="10" name="verify_code">
+      <Position>6</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="42" parent="10" name="mobile_number">
+      <Position>7</Position>
+      <DataType>VARCHAR(11)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="43" parent="10" name="users_verify_code_uindex">
+      <ColNames>verify_code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="44" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>emailaddress</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
