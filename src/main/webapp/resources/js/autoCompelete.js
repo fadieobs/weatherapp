@@ -9,9 +9,9 @@ function fire() {
     var result = $('#citys');
     var hidden = $('#hidden');
     query = document.getElementById('txt').value;
-    var weatherUrl = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=J1BQjK0ZCKdavuajBxD1AhgAZQGIm4sC&q=' + query + '';
+    var weatherUrl = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=GIdAcS4f3eAGBJ7kqm3Ntjv9gnbADHnF&q=' + query + '';
     var wikiRequestTimeout = setTimeout(function () {
-        failed.append("<h1 class='faill'> API Key Not Avilable</h1>")
+        failed.append("")
     }, 8000);
     $.ajax({
         url: weatherUrl, dataType: "jsonp", jsonp: "callback", success: function (response) {
