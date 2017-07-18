@@ -39,28 +39,6 @@
 
 
         <!--    Start Custom Navbar  -->
-            <%--<section class="nav-home">--%>
-            <%--<div class="container" style="height: 35px;">--%>
-            <%--<div class="row">--%>
-
-            <%--<div class="tab">--%>
-            <%--<ul class="tabs row">--%>
-            <%--<li data-class="first" class="col-md-3 col-xs-12 select-home"><a href="#" id="Range1">Range1</a>--%>
-            <%--</li>--%>
-            <%--<li data-class="second" class="col-md-3 col-xs-12"><a href="#" id="Range2">Range1</a></li>--%>
-            <%--<li data-class="third" class="col-md-3 col-xs-12"><a href="#" id="Range3">Range1</a></li>--%>
-            <%--<li data-class="four" class="col-md-3 col-xs-12"><a href="#" id="Range4">Range1</a></li>--%>
-            <%--</ul>--%>
-            <%--</div>--%>
-            <%--</div>--%>
-
-            <%--</div>--%>
-            <%--</section>--%>
-
-        <!--    End Custom Navbar  -->
-
-
-        <!--    Start Custom Navbar  -->
 
         <!--    Start Custom Navbar  -->
         <section class="nav-home">
@@ -70,13 +48,13 @@
                     <div class="tab">
                         <ul class="tabs row">
                             <button data-class="first" class="col-xs-3 select-home"><a href="#"
-                                                                                       id="Range1">Range1</a>
+                                                                                       id="Range1">First Range</a>
                             </button>
-                            <button data-class="second" class="col-md-3 col-xs-3"><a href="#" id="Range2">Range2</a>
+                            <button data-class="second" class="col-md-3 col-xs-3"><a href="#" id="Range2">Second Range</a>
                             </button>
-                            <button data-class="third" class="col-md-3 col-xs-3"><a href="#" id="Range3">Range1</a>
+                            <button data-class="third" class="col-md-3 col-xs-3"><a href="#" id="Range3">Third Range</a>
                             </button>
-                            <button data-class="four" class="col-xs-3"><a href="#" id="Range4">Range1</a></button>
+                            <button data-class="four" class="col-xs-3"><a href="#" id="Range4">Fourth Range</a></button>
                         </ul>
                     </div>
                 </div>
@@ -93,7 +71,7 @@
 
             <div class="row">
                 <div class="range first col-md-8 col-md-offset-2 col-xs-12" style="display: none;">
-                    <h2> &lt; From 1 to 10 &gt;</h2>
+                    <h2> </h2>
                     <ol id="notes1">
                         <li>This is old notes you have added before Number1
                         <li class="fa fa-trash-o"></li>
@@ -115,7 +93,7 @@
                 </div>
 
                 <div class="range second col-md-8 col-md-offset-2 col-xs-12" style="display: none;">
-                    <h2> &lt; From 1 to 10 &gt;</h2>
+                    <h2> </h2>
                     <ol id="notes2">
                         <li>This is old notes you have added before Number1<i class="fa fa-trash-o"></i>
                         </li>
@@ -137,7 +115,7 @@
 
 
                 <div class="range third col-md-8 col-md-offset-2 col-xs-12" style="display: none;">
-                    <h2> &lt; From 1 to 10 &gt;</h2>
+                    <h2> </h2>
                     <ol id="notes3">
                         <li>This is old notes you have added before Number1<i class="fa fa-trash-o"></i>
                         </li>
@@ -161,7 +139,7 @@
 
 
                 <div class="range four col-md-8   col-md-offset-2 col-xs-12">
-                    <h2> &lt; From 1 to 10 &gt;</h2>
+                    <h2> </h2>
                     <ol id="notes4">
                         <li>This is old notes you have added before Number1<i class="fa fa-trash-o"></i>
                         </li>

@@ -26,7 +26,7 @@ public class start {
     //****************************** get 5  day weather by Location Key ********************
     public static HashMap<String, Object> get5DaysWheatherByKey(String locationId) {
         RestTemplate restTemplate = new RestTemplate();
-        LinkedHashMap<String, Object> list = restTemplate.getForObject("http://dataservice.accuweather.com/forecasts/v1/daily/5day/"+locationId+"?apikey=J1BQjK0ZCKdavuajBxD1AhgAZQGIm4sC", LinkedHashMap.class);
+        LinkedHashMap<String, Object> list = restTemplate.getForObject("http://dataservice.accuweather.com/forecasts/v1/daily/5day/"+locationId+"?apikey=GIdAcS4f3eAGBJ7kqm3Ntjv9gnbADHnF", LinkedHashMap.class);
         return list;
     }
 
@@ -36,7 +36,7 @@ public class start {
 
         RestTemplate restTemplate = new RestTemplate();
 //
-        LinkedHashMap<String, Object> list = restTemplate.getForObject("http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + locationId + "?apikey=J1BQjK0ZCKdavuajBxD1AhgAZQGIm4sC", LinkedHashMap.class);
+        LinkedHashMap<String, Object> list = restTemplate.getForObject("http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + locationId + "?apikey=GIdAcS4f3eAGBJ7kqm3Ntjv9gnbADHnF", LinkedHashMap.class);
         ObjectMapper mapper = new ObjectMapper();
 
 
@@ -95,7 +95,7 @@ public class start {
 
     public static HashMap<String, String> GetLocation() {
         RestTemplate restTemplate = new RestTemplate();
-        List<LinkedHashMap<String, Object>> list = restTemplate.getForObject("http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=J1BQjK0ZCKdavuajBxD1AhgAZQGIm4sC&q=cai", List.class);
+        List<LinkedHashMap<String, Object>> list = restTemplate.getForObject("http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=GIdAcS4f3eAGBJ7kqm3Ntjv9gnbADHnF&q=cai", List.class);
 
         ObjectMapper mapper = new ObjectMapper();
         HashMap<String, String> hashMap = new HashMap<String, String>();

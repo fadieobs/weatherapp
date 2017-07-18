@@ -12,10 +12,11 @@
 
 body {
     font-family: Lato, sans-serif;
-    background: url(../images/weather.jpg) no-repeat;
+    /*background: url(../images/weather.jpg) no-repeat;*/
     background-size: cover;
     position: relative;
     overflow-x:hidden;
+
 }
 
 .nav {
@@ -63,7 +64,7 @@ abbr {
     width: 400px;
     margin-right: 7px;
     margin-bottom: 3px;
-    padding: 25px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     color: #000;
@@ -259,3 +260,10 @@ footer p{
 .all, .nav, .admin-notes{
     display: none
 }
+
+/*@media screen and(max-width: 700px) {*/
+    /*.nav input{*/
+        /*padding: 15px;*/
+    /*}*/
+
+
